@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import axios from 'axios';
-import env from 'react-dotenv';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
@@ -11,7 +10,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     const authObject = {
-      'Project-ID': env.REACT_APP_YOUR_API_KEY,
+      'Project-ID': process.env.REACT_APP_API_KEY,
       'User-Name': username,
       'User-Secret': password,
     };

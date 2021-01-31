@@ -1,4 +1,4 @@
-import { MessageForm, MyMessage, TheirMessage } from './';
+import { Loading, MessageForm, MyMessage, TheirMessage } from './';
 
 const ChatFeed = (props) => {
   const { chats, activeChat, userName, messages } = props;
@@ -57,7 +57,7 @@ const ChatFeed = (props) => {
   return (
     <>
       {!chat ? (
-        'Loading...'
+        <Loading />
       ) : (
         <div className="chat-feed">
           <div className="chat-title-container">
